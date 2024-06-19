@@ -13,6 +13,7 @@ int main(){
 
         srand(time(NULL));
         comp=("%d", rand()%3+1);
+        printf("-------------------------------------------\n");
 
         switch(jog){
             case 1: 
@@ -48,9 +49,9 @@ int main(){
         }else if(jog==1&&comp==3||jog==1&&comp==1||jog==3&&comp==2){
             printf("\nVOCE VENCEU!");
         }else{
-            printf("\nVOCE PERDEU\nou numero digitado nao corresponde as opcoes, tente novamente");
+            printf("\nVOCE PERDEU!\nou numero digitado nao corresponde as opcoes, tente novamente");
         }
-
+        printf("\n-------------------------------------------");
         printf("\nDeseja jogar outra rodada?\nS-Sim\tN-Nao\n");
         scanf(" %c", &n);
     }while(n=='s'||n=='S');
