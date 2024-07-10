@@ -11,7 +11,7 @@ int main(void){
         printf("Informe o peso do prato em Kg:\n");
         scanf("%f", &kg);
 
-        if(kg > 0.7){
+        if(kg > 0.7 ){
             total+= 12;
         }else{
             total+= kg * preco;
