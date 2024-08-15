@@ -14,7 +14,6 @@ int main(void){
     int i = 0;
     int n = 0;
     int soma;
-    int media[TAM];
 
     srand(time(NULL));
 
@@ -24,14 +23,14 @@ int main(void){
             notas[i][n] = rand() %10;
             soma += notas[i][n];
         }
-        media[i] = soma/3;
+        notas[i][n] = soma/3;
     }
     
     for (i=0; i<TAM; i++){
         printf("\nALUNO: %s\n", nome[i]);
         for(n=0; n<3; n++){
-            printf("Nota %d: %d\n", i+1, notas[i][n]);
+            printf("Nota %d: %d\n", n+1, notas[i][n]);
         }
-        printf("Media: %d\n", media[i]);
+        printf("Media: %d\n", notas[i][n]);
     }
 }
